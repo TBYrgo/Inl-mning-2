@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+/****************************************************************************************************
+* Funktionen subtract som hämtar två flyttal och retunerar första talet minus det andra talet
+****************************************************************************************************/
+double subtract(double a, double b)
+{
+	return a - b;				// Retunerar a - b
+}
+
+
+/****************************************************************************************************
+* Main funktionen där vi deklarerar tre variablar samt hämtar ett returvärde från funktionen subtract
+****************************************************************************************************/
+void main(void)
+{
+	double a = 3.4;							//Deklarerar variabeln a och tilldelar den värdet 3.4
+	double b = 6.8;							//Deklarerar variabeln b och tilldelar den värdet 6.8
+	double c = subtract(a, b);				//Deklarerar variabeln c och kallar på funktionen subract som retunerar värdet av a - b
+
+	printf("%lg - %lg = %lg\n", a, b, c);	//Printar ut a - b = c
+
+
+	return;
+}
