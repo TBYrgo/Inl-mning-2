@@ -1,0 +1,27 @@
+/*******************************************************************************
+* 2.2.c: Rättning av felkod. I programmet skall Kalle Anks namn, ålder och
+*        sysselsättning (serietidningsfigur) skrivas ut i terminalen.
+*        Programmet kompilerar dock inte på grund av ett antal fel, som
+*        därmed måste korrigeras.
+*******************************************************************************/
+#include <stdio.h>
+
+/*******************************************************************************
+* person_print: Skriver ut personuppgifter i form av namn, ålder samt arbete.
+*******************************************************************************/
+static void person_print(const char* name, const size_t* age, const char* occupation) // Tog bort en asterisk vid void
+{
+	printf("Name: %s\n", name);					//Tog bort pekaren till name för med den pekar den bara på första bokstaven i stringen
+	printf("Age: %zu\n", age);
+	printf("Occupation: %s\n", occupation);		//Tog bort pekaren till occupation för med den pekar den bara på första bokstaven i stringen
+	return;
+}
+
+/*******************************************************************************
+* main: Skriver ut angivna personuppgifter.
+*******************************************************************************/
+int main(void)
+{
+	person_print("Donald Duck", 88, "Cartoon character");
+	return 0;
+}
