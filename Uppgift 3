@@ -1,22 +1,22 @@
 #include <stdio.h>
 
 /********************************************************************************
-* Ett program som med hjälp av två funktioner ska tilldela värden och sen printa ut
+* Ett program som med hjÃ¤lp av tvÃ¥ funktioner ska tilldela vÃ¤rden och sen printa ut
 ********************************************************************************/
 
-/*Funktion för att tilldela värden*/
+/*Funktion fÃ¶r att tilldela vÃ¤rden*/
 void electrical_set(double* v, double* c, double* r)
 {
-	*v = 3.4;		//Sätter värdet 3.4 på adressen till voltage	
-	*c = 6.8;		//Sätter värdet 6.8 på adressen till current
-	*r = *v / *c;	//Sätter värdet på resistance till voltage delat på current
+	*v = 3.4;		//SÃ¤tter vÃ¤rdet 3.4 pÃ¥ adressen till voltage	
+	*c = 6.8;		//SÃ¤tter vÃ¤rdet 6.8 pÃ¥ adressen till current
+	*r = *v / *c;	//SÃ¤tter vÃ¤rdet pÃ¥ resistance till voltage delat pÃ¥ current
 
 	return;
 }
 
 
 
-/*En print funktion som printar de olika värderna*/
+/*En print funktion som printar de olika vÃ¤rderna*/
 void electrical_print(double vo, double cu, double re)
 {
 	printf("-------------------------------------------------------------------------------------------------------\n\n");
@@ -35,9 +35,9 @@ void main(void)
 	double current = 0;				//Skapar variebel current	
 	double resistance = 0;			//Skapar variabel resistance 
 
-	electrical_set(&voltage, &current, &resistance);	//Kallar på på funktion för att sätta värderna 
+	electrical_set(&voltage, &current, &resistance);	//Kallar pÃ¥ pÃ¥ funktion fÃ¶r att sÃ¤tta vÃ¤rderna 
 
-	electrical_print(voltage, current, resistance);		//Kallar på funkion för att printa värderna
+	electrical_print(voltage, current, resistance);		//Kallar pÃ¥ funkion fÃ¶r att printa vÃ¤rderna
 
 
 	return;
