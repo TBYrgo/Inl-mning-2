@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /****************************************************************************************************
-* Funktionen subtract som hämtar två flyttal och lagrar differansen av de två talen på adress z
+* Funktionen subtract som hÃ¤mtar tvÃ¥ flyttal och lagrar differansen av de tvÃ¥ talen pÃ¥ adress z
 ****************************************************************************************************/
 void subtract(double a, double b, double* z)
 {
@@ -12,15 +12,15 @@ void subtract(double a, double b, double* z)
 
 
 /****************************************************************************************************
-* Main funktionen där vi deklarerar tre variablar samt hämtar ett returvärde från funktionen subtract
+* Main funktionen dÃ¤r vi deklarerar tre variablar samt hÃ¤mtar ett returvÃ¤rde frÃ¥n funktionen subtract
 ****************************************************************************************************/
 void main(void)
 {
-	double a = 3.4;							//Deklarerar variabeln a och tilldelar den värdet 3.4
-	double b = 6.8;							//Deklarerar variabeln b och tilldelar den värdet 6.8
+	double a = 3.4;							//Deklarerar variabeln a och tilldelar den vÃ¤rdet 3.4
+	double b = 6.8;							//Deklarerar variabeln b och tilldelar den vÃ¤rdet 6.8
 	double c = 0;                           //Deklarerar variabeln c 
 
-	subtract(a, b, &c);						// Kallar på funtionen subract genom att skicka variabeln a och b samt adressen till c
+	subtract(a, b, &c);						// Kallar pÃ¥ funtionen subract genom att skicka variabeln a och b samt adressen till c
 					     
 
 	printf("%lg - %lg = %lg\n", a, b, c);	//Printar ut a - b = c
