@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+/******************************************************************************************
+* Ett program som sorterar och skriver ut i först fallande ordning och sedan stigande
+******************************************************************************************/
+int main(void)
+{
+    double data[] = { 7, 0.5, 2, 0.3, 0.1, 0.0, -10, 528.2, 8.0, 7.2, 2.3, 1100, 222 }; //Skapar samt tilldelar arrayen data sina värden
+    double minne = 0;                               //Skapar en variabel som används som minne
+
+    int length = sizeof(data) / sizeof(data[0]);    //Räknar ut längden på arrayen data
+
+
+/*Två for loopar som sorterar arrayen i fallande ordning*/
+    for (int i = 0; i < length; i++) 
+    {
+        for (int j = i + 1; j < length; j++) 
+        {
+            if (data[i] < data[j])              //Om talet före nästa tal är mindre 
+            {
+                minne = data[i];                //Lägg första talet på minnet 
+                data[i] = data[j];              //Lägg andra talet på första talets plats
+                data[j] = minne;                //Lägg första talet från minnet på andra talets plats
+            }
+        }
+    }
+
+    /*Printar ut arrayen innehåll*/
+    printf("Arrayen sorterad i fallande ordning: \n");
+    for (int i = 0; i < length; i++) {
+        printf("%lg ", data[i]);
+    }
+   
+
+
+
+    /*Två for loopar som sorterar arrayen i stigande ordning*/
+    for (int i = 0; i < length; i++) 
+    {
+        for (int j = i + 1; j < length; j++)
+        {
+            if (data[i] > data[j])              //Jämför om första värdet är större än nästa
+            {
+                minne = data[i];                //Lägger första värdet på minnet  
+                data[i] = data[j];              //Sparar andra värdet och lägger det på första värdets plats
+                data[j] = minne;                //Sparar första värdet på andra värdets plats
+            }
+        }
+    }
+
+
+    /*Printar ut arrayen innehåll*/
+    printf("\n\nArrayen sorterad i stigande ordning: \n");
+    for (int i = 0; i < length; i++) {
+        printf("%lg ", data[i]);
+    }
+    printf("\n");
+
+	return 0;
+
+}
